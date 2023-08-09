@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "{membership_plan_name}.-.##.",
+ "creation": "2023-07-26 11:52:14.462952",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "membership_plan_name",
+  "benefits",
+  "amended_from",
+  "gym_member",
+  "active_plan",
+  "duration",
+  "date_of_subscription",
+  "end_of_subscription",
+  "trainer",
+  "amount",
+  "status",
+  "trainer_contact",
+  "remaining_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "membership_plan_name",
+   "fieldtype": "Data",
+   "label": "Membership plan name"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration",
+   "options": "Gym trainer"
+  },
+  {
+   "fieldname": "benefits",
+   "fieldtype": "Text",
+   "label": "Benefits"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym membership",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym member",
+   "options": "Gym member"
+  },
+  {
+   "fieldname": "active_plan",
+   "fieldtype": "Link",
+   "label": "Active plan",
+   "options": "Gym membership"
+  },
+  {
+   "fieldname": "date_of_subscription",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of subscription",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_of_subscription",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End of subscription",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym trainer"
+  },
+  {
+   "fetch_from": "trainer.trainer_contact",
+   "fieldname": "trainer_contact",
+   "fieldtype": "Data",
+   "label": "Trainer contact",
+   "options": "Gym trainer"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fieldname": "remaining_days",
+   "fieldtype": "Data",
+   "label": "Remaining days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-02 15:24:39.171119",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym membership",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

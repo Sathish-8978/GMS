@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "{machine_name}.-.##.",
+ "creation": "2023-07-27 11:33:07.979111",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "machine_name",
+  "machine_type",
+  "machine_availability",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "machine_name",
+   "fieldtype": "Data",
+   "label": "Machine name"
+  },
+  {
+   "fieldname": "machine_type",
+   "fieldtype": "Select",
+   "label": "Machine type",
+   "options": "Treadmill\nVibration machine\nExercise bike\nStair mill\nJacob's ladder"
+  },
+  {
+   "default": "0",
+   "fieldname": "machine_availability",
+   "fieldtype": "Check",
+   "label": "Machine availability"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Working\nNot working"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-28 11:38:15.955781",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Cardio machine",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "custom": 1,
+   "title": "Working"
+  },
+  {
+   "color": "Pink",
+   "custom": 1,
+   "title": "Not working"
+  }
+ ]
+}

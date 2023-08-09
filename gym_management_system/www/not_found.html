@@ -1,0 +1,25 @@
+{% extends "templates/not_found.html" %}
+
+{%- block title -%}{{_("Not Found")}}{%- endblock -%}
+
+{% block page_content %}
+
+<script>
+	window.is_404 = true;
+</script>
+
+<div class="error-page">
+	<div>
+		<h2 class="mb-1 mt-4">
+			{{ _("URL is not matching") }}
+		</h2>
+		<div class="text-muted error-text">
+			{{ _("Mission failed") }}
+		</div>
+		<div class="mt-6 back-to-home"><a href='/' class='btn btn-primary'>{{ _("Finished") }}</a></div>
+	</div>
+</div>
+
+{% endblock %}
+
+

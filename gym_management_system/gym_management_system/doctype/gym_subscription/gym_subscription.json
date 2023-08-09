@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "gym_member",
+ "creation": "2023-07-27 12:34:50.171073",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "active_plan",
+  "duration",
+  "date_of_subscription",
+  "end_of_subscription",
+  "trainer",
+  "trainer_contact",
+  "remaining_days",
+  "amount",
+  "status",
+  "gym_membership"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym member",
+   "options": "Gym member"
+  },
+  {
+   "fetch_from": "active_plan.duration",
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration",
+   "options": "Gym trainer"
+  },
+  {
+   "fieldname": "date_of_subscription",
+   "fieldtype": "Date",
+   "label": "Date of subscription"
+  },
+  {
+   "fieldname": "end_of_subscription",
+   "fieldtype": "Date",
+   "label": "End of subscription"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym trainer"
+  },
+  {
+   "fieldname": "remaining_days",
+   "fieldtype": "Date",
+   "label": "Remaining days"
+  },
+  {
+   "fetch_from": "active_plan.cost",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fieldname": "active_plan",
+   "fieldtype": "Link",
+   "label": "Active plan",
+   "options": "Gym membership"
+  },
+  {
+   "fieldname": "gym_membership",
+   "fieldtype": "Link",
+   "label": "Gym membership",
+   "options": "Gym membership"
+  },
+  {
+   "fieldname": "trainer_contact",
+   "fieldtype": "Data",
+   "label": "Trainer contact",
+   "options": "Gym trainer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-31 17:15:02.424488",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym subscription",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym member role",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -18,6 +18,22 @@ app_license = "MIT"
 # web_include_css = "/assets/gym_management_system/css/gym_management_system.css"
 # web_include_js = "/assets/gym_management_system/js/gym_management_system.js"
 
+# web_include_js = {
+#     "404": "gym_management_system/gym_management_system/www/404_page.js"
+# }
+# hooks.py
+
+# web_include_js = {
+#     "all": [
+#         "gym_management_system/gym_management_system/www/404_page.js"
+#     ]
+# }
+# website_catch_all = "Not found"
+
+# website_catch_all = "gym_management_system.gym_management_system.WWW.not_found.html"
+
+# update_website_context = ["frappe_docs.website_context.get_context"]
+
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "gym_management_system/public/scss/website"
 
@@ -33,6 +49,12 @@ app_license = "MIT"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+# extend_website_page_controller_context = {
+#     "frappe.www.404": "gym_management_system.gym_management_system.www.not_found"
+# }
+
+# website_catch_all = "not_found"
+
 
 # Home Pages
 # ----------
@@ -108,6 +130,22 @@ app_license = "MIT"
 #		"on_cancel": "method",
 #		"on_trash": "method"
 #	}
+# }
+
+# hooks.py
+
+doc_events = {
+    "Gym membership": {
+        # "onload": "gym_management_system.gym_management_system.doctype.gym_member.create_gym_member",
+        "before_save": "gym_management_system.gym_management_system.doctype.gym_membership.gym_membership.calculate_remaining_days",
+        "validate": "gym_management_system.gym_management_system.doctype.gym_membership.gym_membership.calculate_remaining_days"
+    }
+}
+
+# doc_events = {
+# 	"Gym membership": {
+# 		"before_save": "gym_management_system.gym_management_system.doctype.gym_membership.gym_membership.before_save"
+# 	}
 # }
 
 # Scheduled Tasks

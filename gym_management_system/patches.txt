@@ -1,0 +1,4 @@
+[post_model_sync]
+gym_management_system.patches.training_status
+
+[pre_model_sync]
